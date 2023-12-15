@@ -1,0 +1,8 @@
+package com.AgeTravel.mod5.model;
+
+@Data
+@Entity
+@Table(name = "compras")
+public class Compra {
+
+}

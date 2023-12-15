@@ -1,0 +1,9 @@
+package com.AgeTravel.mod5.repository;
+
+import com.AgeTravel.mod5.model.Cliente;
+
+public class ClienteRepository extends JpaRepository<Cliente, Long> {
+
+	
+	
+}

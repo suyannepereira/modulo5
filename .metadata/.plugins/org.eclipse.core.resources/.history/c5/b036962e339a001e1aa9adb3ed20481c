@@ -1,0 +1,42 @@
+package com.AgeTravel.mod5.controller;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.servlet.ModelAndView;
+
+import com.AgeTravel.mod5.model.Cliente;
+import com.AgeTravel.mod5.repository.ClienteRepository;
+
+@Controller
+@RequestMapping("/clientes")
+public class ClienteController {
+
+	@Autowired
+    private ClienteRepository clienteRepository;
+
+    @GetMapping
+    public ModelAndView listar() {
+        ModelAndView modelAndView = new ModelAndView("clientes/index.html");
+
+        List<Cliente> clientes = clienteRepository.findAll();
+        modelAndView.addObject("clientes", clientes);
+
+        return modelAndView;
+    }
+	
+    
+    @GetMapping("/cadastrar")
+    public ModelAndView cadastrar() {
+        ModelAndView modelAndView = new ModelAndView("clientes/create"); 
+
+        modelAndView.addObject("cliente", new Cliente());
+
+        return modelAndView;
+    }
+    
+    
+}

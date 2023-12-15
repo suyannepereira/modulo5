@@ -1,0 +1,6 @@
+package com.AgeTravel.mod5.model;
+
+@table
+public class Cliente {
+
+}

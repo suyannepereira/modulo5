@@ -1,0 +1,16 @@
+package com.AgeTravel.mod5.controller;
+
+import org.springframework.stereotype.Controller;
+
+@Controller
+@RequestMap
+public class CompraController {
+
+	
+	
+	
+	
+	
+	
+	
+}
